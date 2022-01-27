@@ -90,8 +90,15 @@ for category, products in categorias_productos.items():
             final_message += '-Producto(oferta): {} - Precio antes: {} - Precio de venta: {}\n\n'.format(name, original_price, sales_price)
     print(final_message)
 
-get_updates = bot.getUpdates()
-print(get_updates)
-print(dir(get_updates[0]))
-print(get_updates[0].my_chat_member)
+# get_updates = bot.getUpdates()
+# print(get_updates)
+# print(dir(get_updates[0]))
+# print(get_updates[0].my_chat_member)
 #bot.send_message(chat_id, text=final_message)
+
+## save products
+products_list = []
+for category, products in categorias_productos.items():
+
+    for product in products:
+        
